@@ -9,7 +9,7 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "svgSprive": "gulp svgSprive",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
