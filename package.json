@@ -9,7 +9,7 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "svgSprive": "gulp svgSprive",
-    "deployProject": "gulp deploy --build"
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -45,6 +45,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "gh-pages": "^6.0.0",
     "newer": "^0.1.5"
   }
 }

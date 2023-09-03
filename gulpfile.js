@@ -23,8 +23,8 @@ import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { svgSprive } from "./gulp/tasks/svgSprive.js";
-import { zip } from "./gulp/tasks/zip.js";
-// import { deploy } from "./gulp/tasks/deploy.js";
+// import { zip } from "./gulp/tasks/zip.js";
+import { deploy } from "./gulp/tasks/deploy.js";
 
 //Наблюдатель за изменениями в файлах
 function watcher() {
@@ -44,13 +44,13 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 //Построение сценариев для выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
-const deployZIP = gulp.series(reset, mainTasks, zip);
+// const deployZIP = gulp.series(reset, mainTasks, zip);
 // const deployProject = gulp.series(build, deploy);
 
 //экспорт сценариев
 export { dev }
 export { build }
-export { deployZIP }
+// export { deployZIP }
 // export { deployProject }
 
 //Выполнение сценария по умолчанию
