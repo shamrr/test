@@ -2,7 +2,7 @@
 
 /* Обнуление */
 *{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend', sans-serif;
     padding: 0;
     margin: 0;
     border: 0;
@@ -23,8 +23,7 @@ nav,footer,header,aside{
 }
 html,body{
     font-size: 10px;
-    background: linear-gradient(180deg, #FFF 63.64%, rgba(255, 255, 255, 0.00) 95.45%);
-    font-family: 'Lexend', sans-serif;
+    background: #110A1D ;
     height: 100%;
     width: 100%;
     line-height: 1;
@@ -69,4 +68,43 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
     max-width: 164rem;
     margin: 0 auto;
+    @include respond (tab-big){
+        max-width: 130rem;
+    }
+    @include respond (tab-land){
+        max-width: 115rem;
+    }
+    @include respond (tab-port){
+        max-width: 95rem;
+    }
+    @include respond (phone){
+        max-width: 76rem;
+    }
+    @include respond(main){
+        max-width: 30rem;
+    }
+}
+
+.blick-first{
+    position: absolute;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.7) 0%, rgba(71, 139, 249, 0.7) 100%);
+    opacity: 0.55;
+    filter: blur(15rem);
+    left: 0;
+    top: 1rem;
+    transform: rotate(-45deg);
+    width: 22.6rem;
+    height: 100rem;
+}
+
+.blick-second{
+    position: absolute;
+    right: 0;
+    bottom: -13.4rem;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.7) 0%,rgba(71, 139, 249, 0.7) 100%);
+    border-radius: 57.4rem;
+    opacity: 0.7;
+    filter: blur(32.5rem);
+    width: 57.4rem;
+    height: 57.4rem;
 }

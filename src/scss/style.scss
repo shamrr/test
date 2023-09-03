@@ -1,14 +1,15 @@
-@import "base/base";
-@import "base/variables";
-@import "base/typography";
 @import "base/mixins";
+@import "base/variables";
+@import "base/base";
+@import "base/typography";
+
 
 @import "sections/header";
-@import "sections/main";
+@import "sections/homepage";
 @import "sections/footer";
 
 @import "blocks/chips";
 @import "blocks/blog";
-
-
+@import"blocks/_btn";
+@import "blocks/burger";
 

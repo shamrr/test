@@ -1,0 +1,121 @@
+.header{
+    &__container{
+        width: 100%;
+        max-width: 164rem;
+        border-radius: 6.4rem;
+        border: .4rem solid $main;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4.8rem;
+        height: 9.6rem;
+        margin-top: 1.6rem;
+        position: relative;
+        
+        @include respond (tab-land){
+            padding: 0 3rem;
+        }
+        @include respond(tab-port){
+            padding: 0 1rem;
+        }
+        @include respond(main){
+            padding: 1rem 1.4rem;
+        }
+    }
+    &__menu{
+        display: flex;
+        transition: right 0.3s ease-in-out;
+        // &.active{
+        //     right: 0%;
+        // }
+        @include respond(phone){
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0rem;
+            right: 0%;
+            
+            background-color: #110A1D;
+            padding: 9.6rem 1rem 9.2rem 1rem;
+            z-index: 1;
+        }
+        @include respond(main){
+            width: 100vw;
+            height: 100vh;
+            padding: 9.6rem 0rem 9.2rem 1rem;
+        }
+    }
+    &__item{
+        &:not(:last-child){
+            margin-right: 3.2rem;
+            @include respond (tab-port){
+                margin-right: 1.5rem;
+            }
+            @include respond(phone){
+                margin-bottom: 0.5rem;
+            }
+            @include respond(main){
+                margin-right: 0;
+            }
+        }
+        @include respond(phone){
+            width: 30rem;
+            padding: 1.3rem 2rem;
+            border-radius: 2.8rem;
+            border: .2rem solid $main;
+            cursor: pointer;
+        }
+    }
+    &__link{
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2rem;
+        color: #fff;
+        @include respond(phone){
+            font-size: 1.8rem;
+        }
+    }
+    &__logo a{
+        font-size: 4rem;
+        font-weight: 500;
+        color: #fff;
+        @include respond (tab-land){
+            font-size: 3rem;
+        }
+        @include respond(main){
+            font-size: 2rem;
+        }
+    }
+    &__btn{
+        padding: 1.4rem;
+        @include respond (tab-port){
+            padding: .8rem;
+        }
+        @include respond(phone){
+            display: none;
+        }
+        &:not(:last-child){
+            margin-right: 1.4rem;
+            @include respond (tab-port){
+                margin-right: 0.5rem;
+            }
+        }
+        &-lang{
+            z-index: 1;
+            @include respond(phone){
+                display: block;
+                position: absolute;
+                top: 2.5rem;
+                right: 6.4rem;
+                // font-size: 0;
+                // color: transparent;
+            }
+            img{
+                margin-right: 0.8rem;
+            }
+        }
+        &-sign{
+            background-color: $main;
+        }
+    }  
+}

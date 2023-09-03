@@ -1,0 +1,53 @@
+.burger{
+    width: 2.8rem;
+    height: 2.8rem;
+    cursor: pointer;
+    align-self: center;
+    display: none;
+    z-index: 2;
+    position: absolute;
+    top: 3.5rem;
+    right: 2.8rem;
+    @include respond(phone){
+        display: block;
+    }
+    @include respond(main){
+        right: 1.4rem;       
+    }
+    &__item{
+        position: relative;
+        width: 2.2rem;
+        height: 0.3rem;
+        background-color: #fff;
+        border-radius: .3rem;
+        &::before, &::after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 2.2rem;
+            height: 0.3rem;
+            background-color: #fff;
+            border-radius: .3rem;
+        }
+        &::before{
+            top: .7rem;
+        }
+        &::after{
+            top: 1.4rem;
+        }
+    }       
+    &.active {
+        .burger__item::before{
+            display: none;
+        }
+        .burger__item{
+            transform: rotate(45deg);
+            top: 1rem;
+        }
+        .burger__item::after{
+            transform: rotate(-90deg);
+            top: 0rem;
+        }
+    }
+    
+}
