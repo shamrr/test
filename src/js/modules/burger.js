@@ -50,6 +50,7 @@ function createBtn (innerText) {
     btn.href = '#';
     btn.innerText = innerText;
     btn.style.textAlign = 'center';
+    btn.style.alignSelf = 'center';
 
     return btn;
 }

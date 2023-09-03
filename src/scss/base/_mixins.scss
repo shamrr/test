@@ -4,6 +4,11 @@
             @content;
         }
     }
+    @if($breakpoints == navi){
+        @media only screen and (max-width: 500px){
+            @content;
+        }
+    }
     @if($breakpoints == small-phone){
         @media only screen and (max-width: 780px){
             @content;

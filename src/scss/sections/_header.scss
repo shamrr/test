@@ -39,6 +39,11 @@
             padding: 9.6rem 1rem 9.2rem 1rem;
             z-index: 1;
         }
+        @include respond(navi){
+            width: 100vw;
+            height: 100vh;
+            padding-top: 13rem;
+        }
         @include respond(main){
             width: 100vw;
             height: 100vh;
@@ -53,6 +58,9 @@
             }
             @include respond(phone){
                 margin-bottom: 0.5rem;
+            }
+            @include respond(navi){
+                align-self: center;
             }
             @include respond(main){
                 margin-right: 0;

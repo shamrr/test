@@ -233,6 +233,13 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
   }
 }
+@media only screen and (max-width: 500px) {
+  .header__menu {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 13rem;
+  }
+}
 @media only screen and (max-width: 320px) {
   .header__menu {
     width: 100vw;
@@ -251,6 +258,11 @@ h1, h2, h3, h4, h5, h6 {
 @media only screen and (max-width: 960px) {
   .header__item:not(:last-child) {
     margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header__item:not(:last-child) {
+    align-self: center;
   }
 }
 @media only screen and (max-width: 320px) {
@@ -605,6 +617,11 @@ h1, h2, h3, h4, h5, h6 {
     width: 40rem;
     height: 95vw;
     margin: 2rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .chips {
+    margin: 4rem;
   }
 }
 @media only screen and (max-width: 320px) {

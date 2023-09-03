@@ -15,11 +15,13 @@
         height: 95vw;
         margin: 2rem 0;
     }
+    @include respond(navi){
+        margin: 4rem;
+    }
     @include respond(main){
         width: 45rem;
         height: 30rem;
         margin: 4.7rem 0 4rem 0;
-        
     }
     &__line{
         &:not(:last-child){
