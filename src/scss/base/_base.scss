@@ -95,6 +95,9 @@ h1,h2,h3,h4,h5,h6{
     transform: rotate(-45deg);
     width: 22.6rem;
     height: 100rem;
+    @include respond(small-phone){
+        height: 30rem;
+    }
 }
 
 .blick-second{
